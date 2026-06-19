@@ -21,7 +21,6 @@ def main_page(page: ft.Page):
             )
         bought_count, total = main_db.count_products()
         counter_text.value = f"Куплено: {bought_count} из {total}"
-        # подсветка активного фильтра — активная кнопка заблокирована
         btn_all.disabled = filter_type == "all"
         btn_bought.disabled = filter_type == "bought"
         btn_unbought.disabled = filter_type == "unbought"
